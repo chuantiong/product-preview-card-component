@@ -1,0 +1,160 @@
+:root {
+    --white-clr: #fff;
+    --ff-fraunces: 'Fraunces', serif;
+    --ff-montserrat: 'Montserrat', sans-serif;
+    --fw-medium: 500;
+    --fw-bold: 700;
+}
+
+*, 
+*::before, 
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--ff-montserrat);
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background-color: #F2EAE2;
+}
+
+/* General */
+
+h1 {
+    font-size: 2rem;
+}
+
+button {
+    background: none;
+    font-family: inherit;
+    border: none;
+}
+
+/* Layouts */
+
+.container {
+    width: 90%;
+    max-width: 343px;
+}
+
+.main {
+    background-color: var(--white-clr);
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.image-placeholder {
+    width: 100%;
+    min-height: 240px;
+    background-image: url("./images/image-product-mobile.jpg");
+    background-size: cover;
+}
+
+.contents--wrapper {
+    padding: 1.5em;
+}
+
+.contents__category-text {
+    color: #6C7289;
+    font-size: .75rem;
+    font-weight: var(--fw-medium);
+    letter-spacing: 0.3125rem;
+    text-transform: uppercase;
+}
+
+.contents__title {
+    color: #1C232B;
+    font-family: var(--ff-fraunces);
+    line-height: 2rem;
+}
+
+.contents__description {
+    color: #6C7289;
+    font-size: .875rem;
+    font-weight: var(--fw-medium);
+    line-height: 1.4375rem;
+}
+
+.contents--prices-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1.19em;
+}
+
+.contents__discount-price {
+    color: #3D8168;
+    font-family: var(--ff-fraunces);
+    margin: 0;
+}
+
+.contents__original-price {
+    color: #6C7289;
+    font-size: .8725rem;
+    text-decoration: line-through;
+}
+
+.cart-icon {
+    width: 14.39px;
+}
+
+.contents__add-to-cart-btn {
+    width: 100%;
+    background-color: #3D8168;
+    color: var(--white-clr);
+    margin-top: 1.5em;
+    padding: 1em 0;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    gap: .73em;
+}
+
+/* Footer */
+
+.attribution-section {
+    background: #F2EAE2;
+    opacity: .9;
+    padding: 2em;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* Media Queries */
+
+@media (min-width: 600px) {
+    .container {
+        max-width: 600px;
+    }
+
+    .main {
+        flex-direction: row;
+    }
+
+    .image-placeholder {
+        min-width: 300px;
+        height: auto;
+        background-image: url("./images/image-product-desktop.jpg");
+    }
+
+    .contents--wrapper {
+        padding: 2em;
+    }
+}
